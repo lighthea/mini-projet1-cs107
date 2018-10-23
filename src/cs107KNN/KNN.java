@@ -3,11 +3,12 @@ package cs107KNN;
 import java.util.Arrays;
 
 public class KNN {
+
     public static void main(String[] args) {
-        int testlines = 19;
-        int testcolumns = 19;
+        int testlines = 10;
+        int testcolumns = 10;
         int test = testlines * testcolumns;
-        int K =10;
+        int K =7;
 
         byte[][][] trainImages = parseIDXimages(Helpers.readBinaryFile("D:\\DEVELOPPEMENT\\Projects\\knn\\mini-projet1-cs107\\datasets\\Train\\5000-per-digit_images_train"));
         byte[] trainLabels = parseIDXlabels(Helpers.readBinaryFile("D:\\DEVELOPPEMENT\\Projects\\knn\\mini-projet1-cs107\\datasets\\Train\\5000-per-digit_labels_train"));
@@ -15,10 +16,10 @@ public class KNN {
         byte[] testLabels = parseIDXlabels(Helpers.readBinaryFile("D:\\DEVELOPPEMENT\\Projects\\knn\\mini-projet1-cs107\\datasets\\Test\\10k_labels_test"));
         byte[] predictions = new byte[test];
 
+
         long start = System.currentTimeMillis();
         for(int i =0; i< test; ++i) {
             predictions[i] = knnClassify(testImages[i],trainImages, trainLabels, K);
-
         }
         double time = (System.currentTimeMillis() - start)/1000d;
         System.out.println("Accuracy : " + accuracy(predictions, Arrays.copyOfRange(testLabels, 0, test)));
@@ -41,6 +42,7 @@ public class KNN {
 
         return b7ToB0 & 0xFF | (b15ToB8 & 0xFF) << 8 | (b23ToB16 & 0xFF) << 16 | (b31ToB24 & 0xFF) << 24;
     }
+
     public static float squaredEuclideanDistance( byte[][] a, byte[][] b) {
         double sum = 0;
         /*
@@ -107,18 +109,7 @@ public class KNN {
         return vector;
     }
 
-	/*public static float squaredEuclideanDistance(byte[][] a, byte[][] b) {
-		assert (a.length == b.length) && (a[0].length == b[0].length);
-		float distanceSquared=0;
-		for(int i =0; i < a.length; ++i) {
-			for(int j =0; j< a[0].length;++j) {
-				distanceSquared += Math.pow(a[i][j]-b[i][j], 2);
-			}
-		}
-		return distanceSquared;
-	}*/
-
-public static float average (byte[][] a) {
+    public static float average (byte[][] a) {
 
         float average = 0;
         int lenI = a.length, lenJ = a[0].length;
@@ -126,15 +117,15 @@ public static float average (byte[][] a) {
         for (int j = 0; j < lenJ; ++j) average += a[i][j] & 0xFF;
         return average / (lenI * lenJ);
         }
-/**
- * @brief Computes the inverted similarity between 2 images.
- *
- * @param a, b two images of same dimensions
- *
- * @return the inverted similarity between the two images
- */
+    /**
+     * @brief Computes the inverted similarity between 2 images.
+     *
+     * @param a, b two images of same dimensions
+     *
+     * @return the inverted similarity between the two images
+     */
 
-public static float invertedSimilarity(byte[][] a, byte[][] b) {
+    public static float invertedSimilarity(byte[][] a, byte[][] b) {
     assert (a.length == b.length) && (a[0].length == b[0].length);
     float numerator = 0;
     float denominator = 0;
@@ -144,6 +135,7 @@ public static float invertedSimilarity(byte[][] a, byte[][] b) {
 
     /***************************************************/
     //calcul de trucdudessus
+
     for(int i=0; i< a.length;++i) {
         for(int j=0; j< a[0].length;++j) {
             numerator += (a[i][j] - moyenneA) * (b[i][j] - moyenneB);
@@ -275,6 +267,7 @@ public static float invertedSimilarity(byte[][] a, byte[][] b) {
         }
 
     }
+
     public static int[] quicksortIndices(double[] values) {
         int len = values.length;
         int[] indices = new int[len];
@@ -286,10 +279,11 @@ public static float invertedSimilarity(byte[][] a, byte[][] b) {
         quicksortIndices(values,indices,low,high);
         return indices;
     }
+
     public static byte knnClassify(byte[][] image, byte[][][] trainImages, byte[] trainLabels, int k) {
         double [] similarity = new double[trainLabels.length];
 
-        Arrays.parallelSetAll(similarity, i -> { return invertedSimilarity(image, trainImages[i]);});
+        Arrays.parallelSetAll(similarity, i -> {return invertedSimilarity(image, trainImages[i]);});
         int[] sortedIndices = quicksortIndices(similarity);
 
         return electLabel(sortedIndices, trainLabels, k);

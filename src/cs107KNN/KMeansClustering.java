@@ -34,8 +34,7 @@ public class KMeansClustering {
      * @return the array of byte ready to be written to an IDX file
      */
 	public static byte[] encodeIDXimages(byte[][][] images) {
-		// TODO: Implémenter
-		return null;
+
 	}
 
     /**
