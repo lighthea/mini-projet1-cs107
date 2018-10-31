@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa6d6521-51ea-4514-887a-02bf30e02793" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/Helpers$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/Helpers$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/Helpers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KMeansClustering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KNN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KNNTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/SignatureChecks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KMeansClustering.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cs107KNN/KMeansClustering.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KNN.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cs107KNN/KNN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cs107KNN/KNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs107KNN/KNN.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -46,41 +41,53 @@
     <session id="-2049861806">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.7" value="6" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="KNN" value="1" />
           <entry key="class" value="3" />
-          <entry key="classpath" value="1" />
-          <entry key="eml" value="1" />
-          <entry key="iml" value="1" />
-          <entry key="java" value="20" />
-          <entry key="project" value="1" />
+          <entry key="classpath" value="2" />
+          <entry key="eml" value="2" />
+          <entry key="iml" value="2" />
+          <entry key="java" value="46" />
+          <entry key="project" value="2" />
+          <entry key="reduced10Kto1K_labels" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="Eclipse" value="2" />
-          <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="20" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Eclipse" value="4" />
+          <entry key="IDEA_MODULE" value="2" />
+          <entry key="JAVA" value="46" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="UML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5000" />
+          <entry key="java" value="11175" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5000" />
+          <entry key="JAVA" value="11175" />
+          <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -88,29 +95,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNNTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="326">
+              <caret line="86" column="111" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="111" />
               <folding>
                 <element signature="method#extractInt#0;class#KNN#0" />
                 <element signature="method#squaredEuclideanDistance#0;class#KNN#0" />
                 <element signature="docComment;method#parseIDXimages#0;class#KNN#0" />
-                <element signature="method#parseIDXimages#0;class#KNN#0" />
                 <element signature="docComment;method#parseIDXlabels#0;class#KNN#0" />
                 <element signature="method#parseIDXlabels#0;class#KNN#0" />
                 <element signature="method#average#0;class#KNN#0" />
                 <element signature="docComment;method#invertedSimilarity#0;class#KNN#0" />
-                <element signature="method#invertedSimilarity#0;class#KNN#0" />
                 <element signature="method#quicksortIndices#0;class#KNN#0" />
                 <element signature="method#quicksortIndices#1;class#KNN#0" />
                 <element signature="method#swap#0;class#KNN#0" />
@@ -119,7 +115,6 @@
                 <element signature="method#swap#1;class#KNN#0" />
                 <element signature="method#quicksortIndices#2;class#KNN#0" />
                 <element signature="method#quicksortIndices#3;class#KNN#0" />
-                <element signature="method#knnClassify#0;class#KNN#0" />
                 <element signature="method#accuracy#0;class#KNN#0" />
               </folding>
             </state>
@@ -129,13 +124,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#encodeIDXimages#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#encodeIDXlabels#0;class#KMeansClustering#0" />
+                <element signature="method#encodeIDXlabels#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#encodeInt#0;class#KMeansClustering#0" />
+                <element signature="method#encodeInt#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#KMeansReduce#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#recomputeAssignments#0;class#KMeansClustering#0" />
+                <element signature="method#recomputeAssignments#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#recomputeCentroids#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#initialize#0;class#KMeansClustering#0" />
+                <element signature="method#initialize#0;class#KMeansClustering#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>TEST</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,8 +157,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cs107KNN/KNNTest.java" />
         <option value="$PROJECT_DIR$/../../fichierproj1/mini-projet1-cs107/src/cs107KNN/KNN.java" />
+        <option value="$PROJECT_DIR$/src/cs107KNN/SignatureChecks.java" />
+        <option value="$PROJECT_DIR$/src/cs107KNN/KNNTest.java" />
+        <option value="$PROJECT_DIR$/datasets/reduced10Kto1K_labels" />
         <option value="$PROJECT_DIR$/src/cs107KNN/KNN.java" />
         <option value="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" />
       </list>
@@ -177,10 +193,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="241" />
-    <option name="y" value="302" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -207,6 +222,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="cs107KNN" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mini-projet1-cs107" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -221,17 +240,18 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/DEVELOPPEMENT/Projects/fichierproj1/mini-projet1-cs107/src/cs107KNN/KNN.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540222722617" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541071806719" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\DEVELOPPEMENT\Projects\knn\mini-projet1-cs107\datasets\Test" />
       <recent name="D:\DEVELOPPEMENT\Projects\knn\mini-projet1-cs107\datasets\Train" />
+      <recent name="D:\DEVELOPPEMENT\Projects\knn\mini-projet1-cs107\datasets\Test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -247,6 +267,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.KNN">
+    <configuration name="KMeansClustering" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="cs107KNN.KMeansClustering" />
+      <module name="mini-projet1-cs107" />
+      <option name="VM_PARAMETERS" value="-XX:+AggressiveOpts" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs107KNN.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="MakeProject" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KNN" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -265,7 +304,7 @@
         <option name="MakeProject" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KNNTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="KNNTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
@@ -298,12 +337,8 @@
     <list>
       <item itemvalue="Application.KNN" />
       <item itemvalue="Application.KNNTest" />
+      <item itemvalue="Application.KMeansClustering" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.KNNTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",SHOW_PROPERTIES,SHOW_INTERFACES" />
@@ -323,11 +358,41 @@
       <workItem from="1540197107789" duration="5862000" />
       <workItem from="1540207093801" duration="12569000" />
       <workItem from="1540222774459" duration="554000" />
+      <workItem from="1540276963216" duration="4412000" />
+      <workItem from="1540303826761" duration="255000" />
+      <workItem from="1540306155053" duration="8121000" />
+      <workItem from="1540369132461" duration="10196000" />
+      <workItem from="1540385695007" duration="7727000" />
+      <workItem from="1540456217046" duration="822000" />
+      <workItem from="1540463222962" duration="102000" />
+      <workItem from="1540557909542" duration="5467000" />
+      <workItem from="1540568128381" duration="753000" />
+      <workItem from="1540569422199" duration="3896000" />
+      <workItem from="1540577792163" duration="326000" />
+      <workItem from="1540763869013" duration="256000" />
+      <workItem from="1540805978447" duration="3854000" />
+      <workItem from="1540810515581" duration="1538000" />
+      <workItem from="1540834538282" duration="3471000" />
+      <workItem from="1540848506033" duration="6037000" />
+      <workItem from="1540883471746" duration="2672000" />
+      <workItem from="1540986219590" duration="768000" />
+      <workItem from="1540987897845" duration="1231000" />
+      <workItem from="1540989401348" duration="9743000" />
+      <workItem from="1541059172216" duration="1047000" />
+      <workItem from="1541071401799" duration="252000" />
     </task>
+    <task id="LOCAL-00001" summary="UPdate on Kmeans">
+      <created>1540998678965</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540998678965</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59326000" />
+    <option name="totallyTimeSpent" value="132272000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,8 +405,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4926004" visible="true" weight="0.2624161" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4926004" visible="true" weight="0.16174497" />
       <window_info id="Structure" order="1" sideWeight="0.50739956" side_tool="true" weight="0.2590604" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -350,15 +416,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Learn" order="7" weight="0.3295302" />
       <window_info anchor="bottom" id="Dependency Viewer" order="0" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32765958" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50067115" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32907802" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49932885" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39858156" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32907802" />
@@ -374,8 +440,8 @@
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.31140938" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4926004" visible="true" weight="0.2590604" />
-      <window_info id="Structure" order="1" sideWeight="0.50739956" side_tool="true" visible="true" weight="0.2590604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4926004" visible="true" weight="0.2946309" />
+      <window_info id="Structure" order="1" sideWeight="0.50739956" side_tool="true" weight="0.2590604" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -384,13 +450,13 @@
       <window_info id="Learn" order="7" weight="0.3295302" />
       <window_info anchor="bottom" id="Dependency Viewer" order="0" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50067115" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49932885" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -404,7 +470,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.20536913" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.31140938" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,12 +484,15 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/KNN" />
     </ignored-roots>
+    <MESSAGE value="UPdate on Kmeans" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPdate on Kmeans" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
         <watch expression="tensor[0]" />
         <watch expression="tensor[0][0]" />
+        <watch expression="images[0]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -432,29 +501,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mini-projet1-cs107.eml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mini-projet1-cs107.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs107KNN/Helpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/cs107KNN/KNN.class" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -484,13 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs107KNN/SignatureChecks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/src.zip!/java/util/function/IntToDoubleFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -498,34 +537,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNN.java.zip" />
     <entry file="file://$PROJECT_DIR$/../../fichierproj1/mini-projet1-cs107/src/cs107KNN/KNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="393" column="32" selection-start-line="393" selection-start-column="32" selection-end-line="393" selection-end-column="32" />
+        <state relative-caret-position="309">
+          <caret line="392" column="32" selection-start-line="392" selection-start-column="32" selection-end-line="392" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/src.zip!/java/util/function/IntUnaryOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mini-projet1-cs107.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mini-projet1-cs107.eml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs107KNN/SignatureChecks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/Train/reduced10Kto1K_labels">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../fichierproj1/mini-projet1-cs107/src/cs107KNN/KMeansClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="129" selection-start-line="129" selection-end-line="140" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/src.zip!/java/util/stream/SpinedBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="722" selection-start-line="722" selection-end-line="722" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cs107KNN.KNN">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cs107KNN.KNN</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="36.0" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNNTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+        <state relative-caret-position="1819">
+          <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs107KNN/Helpers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="326">
+          <caret line="86" column="111" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="111" />
           <folding>
             <element signature="method#extractInt#0;class#KNN#0" />
             <element signature="method#squaredEuclideanDistance#0;class#KNN#0" />
             <element signature="docComment;method#parseIDXimages#0;class#KNN#0" />
-            <element signature="method#parseIDXimages#0;class#KNN#0" />
             <element signature="docComment;method#parseIDXlabels#0;class#KNN#0" />
             <element signature="method#parseIDXlabels#0;class#KNN#0" />
             <element signature="method#average#0;class#KNN#0" />
             <element signature="docComment;method#invertedSimilarity#0;class#KNN#0" />
-            <element signature="method#invertedSimilarity#0;class#KNN#0" />
             <element signature="method#quicksortIndices#0;class#KNN#0" />
             <element signature="method#quicksortIndices#1;class#KNN#0" />
             <element signature="method#swap#0;class#KNN#0" />
@@ -534,7 +646,6 @@
             <element signature="method#swap#1;class#KNN#0" />
             <element signature="method#quicksortIndices#2;class#KNN#0" />
             <element signature="method#quicksortIndices#3;class#KNN#0" />
-            <element signature="method#knnClassify#0;class#KNN#0" />
             <element signature="method#accuracy#0;class#KNN#0" />
           </folding>
         </state>
@@ -542,8 +653,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#encodeIDXimages#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#encodeIDXlabels#0;class#KMeansClustering#0" />
+            <element signature="method#encodeIDXlabels#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#encodeInt#0;class#KMeansClustering#0" />
+            <element signature="method#encodeInt#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#KMeansReduce#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#recomputeAssignments#0;class#KMeansClustering#0" />
+            <element signature="method#recomputeAssignments#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#recomputeCentroids#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#initialize#0;class#KMeansClustering#0" />
+            <element signature="method#initialize#0;class#KMeansClustering#0" />
+          </folding>
         </state>
       </provider>
     </entry>
