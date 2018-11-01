@@ -16,7 +16,10 @@ public class KNN {
         System.out.println(trainImages.length);
         //Helpers.show("Test", trainImages, trainImages.length,1);
         byte[] trainLabels = parseIDXlabels(Helpers.readBinaryFile("datasets/reduced10Kto1K_labels"));
+<<<<<<< HEAD
         Helpers.show("Test", trainImages,trainLabels, 10,10);
+=======
+>>>>>>> master
         byte[][][] testImages = parseIDXimages(Helpers.readBinaryFile("datasets/Test/10k_images_test"));
         byte[] testLabels = parseIDXlabels(Helpers.readBinaryFile("datasets/Test/10k_labels_test"));
         byte[] predictions = new byte[test];

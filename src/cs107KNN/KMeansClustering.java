@@ -6,8 +6,13 @@ import java.util.*;
 
 public class KMeansClustering {
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		int K = 1000;
 		int maxIters = 20;
+=======
+		int K = 10;
+		int maxIters = 5;
+>>>>>>> master
 
 		byte[][][] images = KNN.parseIDXimages(Helpers.readBinaryFile("datasets/Test/10k_images_test"));
 		byte[] labels = KNN.parseIDXlabels(Helpers.readBinaryFile("datasets/Test/10k_labels_test"));
@@ -43,12 +48,16 @@ public class KMeansClustering {
         encodeInt(images.length, imageIDX, 4);
         encodeInt(images[0].length, imageIDX, 8);
         encodeInt(images[0][0].length, imageIDX, 12);
+<<<<<<< HEAD
         for (int i = 0; i < depth ; i++)
             for (int j = 0; j < imageHeight; j++) {
                 for (int k = 0; k < imageWidth; k++) {
                     images[i][j][k] = (byte) ((images[i][j][k] & 0xFF) + 128);
                 }
             }
+=======
+
+>>>>>>> master
 		for (int row = 0, image = 0, pixel = 16;
              image < depth;
              pixel += imageWidth, image += (row+1)/imageHeight, row = (row+1)%imageHeight) {
@@ -159,7 +168,10 @@ public class KMeansClustering {
     public static void recomputeCentroids(byte[][][] tensor/*images*/, byte[][][] centroids/*imagesmoyennes*/, int[] assignments) {
         centroids = new byte[centroids.length][centroids[0].length][centroids[0][0].length];
         float compteur = 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         for (int i = 0; i < assignments.length; i++)/*pour chaque image d'indice i*/ {
             for (int u = 0; u < centroids[0].length; u++)/*pour chaque ligne*/ {
                 for (int v = 0; v < centroids[0][0].length; v++)/*pour chaque colonne*/  {
