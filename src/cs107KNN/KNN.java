@@ -122,7 +122,7 @@ public class KNN {
 
         for (int i = 0; i < lenI; ++i)
             for (int j = 0; j < lenJ; ++j)
-                average += a[i][j] & 0xFF;
+                average += a[i][j];
 
         return average / (lenI * lenJ);
         }
@@ -135,37 +135,37 @@ public class KNN {
      */
 
     public static float invertedSimilarity(byte[][] a, byte[][] b) {
-    assert (a.length == b.length) && (a[0].length == b[0].length);
+        assert (a.length == b.length && a.length != 0) && (a[0].length == b[0].length && a[0].length != 0);
 
-    float denominator;
-    float numerator = 0;
+        float denominator;
+        float numerator = 0;
 
-    float moyenneA  = average(a);
-    float moyenneB  = average(b);
+        float moyenneA  = average(a);
+        float moyenneB  = average(b);
 
-    float moyenneAminus;
-    float moyenneBminus;
+        float moyenneAminus;
+        float moyenneBminus;
 
 
-    /**************************************************/
-    float temp1 =0; //Première partie du dénominateur
-    float temp2 =0; //Seconde partie du dénominateur
+        /**************************************************/
+        float temp1 =0; //Première partie du dénominateur
+        float temp2 =0; //Seconde partie du dénominateur
 
-    for(int i = 0; i < a.length; ++i) {
-        for(int j = 0; j < a[0].length; ++j) {
-            moyenneAminus = a[i][j] - moyenneA;
-            moyenneBminus = b[i][j] - moyenneB;
+        for(int i = 0; i < a.length; ++i) {
+            for(int j = 0; j < a[0].length; ++j) {
+                moyenneAminus = a[i][j] - moyenneA;
+                moyenneBminus = b[i][j] - moyenneB;
 
-            numerator   += (moyenneAminus * moyenneBminus);
-            temp2       += Math.pow(moyenneBminus,2);
-            temp1       += Math.pow(moyenneAminus,2);
+                numerator   += (moyenneAminus * moyenneBminus);
+                temp2       += Math.pow(moyenneBminus,2);
+                temp1       += Math.pow(moyenneAminus,2);
+            }
         }
-    }
-    denominator = (float) Math.sqrt(temp1 * temp2);
-    /***************************************************/
+        denominator = (float) Math.sqrt(temp1 * temp2);
+        /***************************************************/
 
-    if(denominator == 0 ) {return 2;}
-    else {return (float) 1 - (numerator/denominator) ;}
+        if(denominator == 0 ) {return 2;}
+        else {return (float) 1 - (numerator/denominator) ;}
 }
 
     public static int[] quicksortIndices(float[] values) {
@@ -239,7 +239,7 @@ public class KNN {
             ++results[labels[sortedIndices[i]]];
         }
 
-        return (byte) (indexOfMax(results) & (0xFF));
+        return (byte) (indexOfMax(results));
     }
 
     public static void swap(int i, int j, double[] values, int[] indices) {
@@ -303,7 +303,7 @@ public class KNN {
 
         double [] similarity = new double[trainLabels.length];
 
-        Arrays.parallelSetAll(similarity, i -> invertedSimilarity(image, trainImages[i]));
+        Arrays.parallelSetAll(similarity, i -> squaredEuclideanDistance(image, trainImages[i]));
         assert similarity.length != 0;
         int[] sortedIndices = quicksortIndices(similarity);
 
