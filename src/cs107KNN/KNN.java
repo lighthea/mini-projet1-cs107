@@ -8,25 +8,22 @@ public class KNN {
 
     public static void main(String[] args) {
 
-        int columns = 12, lines = 10;
+        int columns = 10, lines = 10;
         int test = columns * lines;
         int K = 10;
 
-        byte[][][] trainImages = parseIDXimages(Helpers.readBinaryFile("datasets/reduced10Kto1K_images"));
-        System.out.println(trainImages.length);
-        //Helpers.show("Test", trainImages, trainImages.length,1);
-        byte[] trainLabels = parseIDXlabels(Helpers.readBinaryFile("datasets/reduced10Kto1K_labels"));
-<<<<<<< HEAD
-        Helpers.show("Test", trainImages,trainLabels, 10,10);
-=======
->>>>>>> master
+        byte[][][] trainImages = parseIDXimages(Helpers.readBinaryFile("datasets/Train/5000-per-digit_images_train"));
+        byte[] trainLabels = parseIDXlabels(Helpers.readBinaryFile("datasets/Train/5000-per-digit_labels_train"));
         byte[][][] testImages = parseIDXimages(Helpers.readBinaryFile("datasets/Test/10k_images_test"));
         byte[] testLabels = parseIDXlabels(Helpers.readBinaryFile("datasets/Test/10k_labels_test"));
         byte[] predictions = new byte[test];
 
         long start = System.currentTimeMillis();
+        assert testImages != null;
+        assert trainLabels != null;
 
         for(int i =0; i< test; ++i) {
+
             predictions[i] = knnClassify(testImages[i],trainImages, trainLabels, K);
         }
 
@@ -57,18 +54,20 @@ public class KNN {
     public static float squaredEuclideanDistance( byte[][] a, byte[][] b) {
         float sum = 0;
 
-        //We should only compare to similar matrices
-        assert a.length == b.length && a[0].length == b[0].length;
+        //We should only compare similar matrices
+        assert (a.length == b.length && a.length != 0) && (a[0].length == b[0].length && a[0].length != 0);
+
 
         int lenI = a.length, lenJ = a[0].length;
 
+        //Proper calculation of the squared-euclidean distance
         for (int i = 0; i < lenI; i++) {
             for (int j = 0; j < lenJ; j++) {
                 sum += Math.pow(a[i][j] - b[i][j], 2);
             }
         }
 
-            return sum;
+        return sum;
         }
     /**
      * Parses an IDX file containing images
@@ -80,7 +79,7 @@ public class KNN {
     public static byte[][][] parseIDXimages( byte[] data) {
 
         //verifying the magic number
-        assert extractInt(data[0], data[1], data[2], data[3]) == 2051;
+        if (extractInt(data[0], data[1], data[2], data[3]) != 2051)  return null;
 
         //reading metadata
         int nImages     = extractInt(data[4], data[5], data[6], data[7]);
@@ -109,12 +108,11 @@ public class KNN {
      */
     public static byte[] parseIDXlabels(byte[] data) {
         //verifying the magic number
-        assert extractInt(data[0], data[1], data[2], data[3]) == 2049;
+        if (extractInt(data[0], data[1], data[2], data[3]) != 2049) { return null; }
 
         //reading metadata
         int nLabels   = extractInt(data[4], data[5], data[6], data[7]);
-        byte[] vector = Arrays.copyOfRange(data, 8, nLabels + 8);
-        return vector;
+        return Arrays.copyOfRange(data, 8, nLabels + 8);
     }
 
     public static float average (byte[][] a) {
@@ -149,10 +147,9 @@ public class KNN {
     float moyenneBminus;
 
 
-    /***************************************************/
-    //calcul de trucdudessous
-    float temp1 =0;
-    float temp2 =0;
+    /**************************************************/
+    float temp1 =0; //Première partie du dénominateur
+    float temp2 =0; //Seconde partie du dénominateur
 
     for(int i = 0; i < a.length; ++i) {
         for(int j = 0; j < a[0].length; ++j) {
@@ -242,8 +239,7 @@ public class KNN {
             ++results[labels[sortedIndices[i]]];
         }
 
-        byte b = (byte) (indexOfMax(results) & (0xFF));
-        return b;
+        return (byte) (indexOfMax(results) & (0xFF));
     }
 
     public static void swap(int i, int j, double[] values, int[] indices) {
@@ -321,6 +317,6 @@ public class KNN {
                 ++counter;
             }
         }
-        return (double)counter/(double)trueLabels.length;
+        return (double)counter / (double)trueLabels.length;
     }
 }
