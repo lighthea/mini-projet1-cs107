@@ -7,8 +7,8 @@ public class KMeansClustering {
 		int K = 1000;
 		int maxIters = 20;
 
-		byte[][][] images = KNN.parseIDXimages(Helpers.readBinaryFile("datasets/Test/10k_images_test"));
-		byte[] labels = KNN.parseIDXlabels(Helpers.readBinaryFile("datasets/Test/10k_labels_test"));
+		byte[][][] images = KNN.parseIDXimages(Helpers.readBinaryFile("../datasets/Test/10k_images_test"));
+		byte[] labels = KNN.parseIDXlabels(Helpers.readBinaryFile("../datasets/Test/10k_labels_test"));
 
 		byte[][][] reducedImages = KMeansReduce(images, K, maxIters);
 
@@ -20,8 +20,8 @@ public class KMeansClustering {
 		}
 
 		Helpers.show("Titre", reducedImages, reducedLabels, 10, 10);
-		Helpers.writeBinaryFile("datasets/reduced10Kto1K_images", encodeIDXimages(reducedImages));
-		Helpers.writeBinaryFile("datasets/reduced10Kto1K_labels", encodeIDXlabels(reducedLabels));
+		Helpers.writeBinaryFile("../datasets/reduced10Kto1K_images", encodeIDXimages(reducedImages));
+		Helpers.writeBinaryFile("../datasets/reduced10Kto1K_labels", encodeIDXlabels(reducedLabels));
 
 	}
 
@@ -143,6 +143,7 @@ public class KMeansClustering {
                 temp2 = KNN.squaredEuclideanDistance(tensor[i], centroids[assignments[i]]);
                 if (temp < temp2){
                     assignments[i] = j;
+                //Should a centroid be closer to the image than the previous ones, its value is stored in the assignment of that image
                 }
             }
         }
@@ -164,7 +165,7 @@ public class KMeansClustering {
             for (int u = 0; u < centroids[0].length; u++)/*pour chaque ligne*/ {
                 for (int v = 0; v < centroids[0][0].length; v++)/*pour chaque colonne*/  {
                     compteur += 1;
-                    centroids[assignments[i]][u][v] += (1 / (compteur) * (tensor[assignments[i]][u][v] & 0xFF));
+                    centroids[assignments[i]][u][v] += (1 / (compteur) * (tensor[assignments[i]][u][v]));
                 }
             }
         compteur = 0;

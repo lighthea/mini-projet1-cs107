@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aa6d6521-51ea-4514-887a-02bf30e02793" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KMeansClustering.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cs107KNN/KMeansClustering.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/cs107KNN/KNN.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cs107KNN/KNN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cs107KNN/KNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs107KNN/KNN.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -38,7 +41,7 @@
     <session id="-2049861806">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="2" />
@@ -47,11 +50,11 @@
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="6" />
+          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.7" value="7" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,7 +64,7 @@
           <entry key="classpath" value="2" />
           <entry key="eml" value="2" />
           <entry key="iml" value="2" />
-          <entry key="java" value="46" />
+          <entry key="java" value="47" />
           <entry key="project" value="2" />
           <entry key="reduced10Kto1K_labels" value="3" />
         </counts>
@@ -71,21 +74,21 @@
           <entry key="CLASS" value="3" />
           <entry key="Eclipse" value="4" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="46" />
+          <entry key="JAVA" value="47" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="UML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11295" />
-          <entry key="txt" value="30" />
+          <entry key="java" value="12649" />
+          <entry key="txt" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11295" />
-          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="JAVA" value="12649" />
+          <entry key="PLAIN_TEXT" value="48" />
         </counts>
       </usages-collector>
     </session>
@@ -95,15 +98,39 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="88" column="102" selection-start-line="88" selection-start-column="98" selection-end-line="88" selection-end-column="102" />
+            <state relative-caret-position="3774">
+              <caret line="336" column="7" lean-forward="true" selection-start-line="330" selection-start-column="4" selection-end-line="336" selection-end-column="7" />
+              <folding>
+                <element signature="method#quicksortIndices#0;class#KNN#0" />
+                <element signature="method#quicksortIndices#1;class#KNN#0" />
+                <element signature="method#swap#0;class#KNN#0" />
+                <element signature="method#indexOfMax#0;class#KNN#0" />
+                <element signature="method#electLabel#0;class#KNN#0" />
+                <element signature="method#swap#1;class#KNN#0" />
+                <element signature="method#quicksortIndices#2;class#KNN#0" />
+                <element signature="method#quicksortIndices#3;class#KNN#0" />
+                <element signature="method#knnClassify#0;class#KNN#0" />
+                <element signature="method#accuracy#0;class#KNN#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="128" column="13" lean-forward="true" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+              <folding>
+                <element signature="method#main#0;class#KMeansClustering#0" />
+                <element signature="method#encodeIDXimages#0;class#KMeansClustering#0" />
+                <element signature="method#encodeIDXlabels#0;class#KMeansClustering#0" />
+                <element signature="docComment;method#encodeInt#0;class#KMeansClustering#0" />
+                <element signature="method#encodeInt#0;class#KMeansClustering#0" />
+                <element signature="method#KMeansReduce#0;class#KMeansClustering#0" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -129,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/cs107KNN/SignatureChecks.java" />
         <option value="$PROJECT_DIR$/src/cs107KNN/KNNTest.java" />
         <option value="$PROJECT_DIR$/datasets/reduced10Kto1K_labels" />
-        <option value="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" />
         <option value="$PROJECT_DIR$/src/cs107KNN/KNN.java" />
+        <option value="$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java" />
       </list>
     </option>
   </component>
@@ -161,9 +188,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -173,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -190,8 +216,13 @@
             <path>
               <item name="mini-projet1-cs107" type="b2602c69:ProjectViewProjectNode" />
               <item name="mini-projet1-cs107" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="Train" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-projet1-cs107" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-projet1-cs107" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs107KNN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mini-projet1-cs107" type="b2602c69:ProjectViewProjectNode" />
@@ -201,6 +232,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,7 +242,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/DEVELOPPEMENT/Projects/fichierproj1/mini-projet1-cs107/src/cs107KNN/KNN.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541413807334" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541423952571" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -350,7 +382,9 @@
       <workItem from="1540989401348" duration="9743000" />
       <workItem from="1541059172216" duration="1047000" />
       <workItem from="1541071401799" duration="542000" />
-      <workItem from="1541411055851" duration="2749000" />
+      <workItem from="1541411055851" duration="3164000" />
+      <workItem from="1541419589685" duration="343000" />
+      <workItem from="1541421121300" duration="2829000" />
     </task>
     <task id="LOCAL-00001" summary="UPdate on Kmeans">
       <created>1540998678965</created>
@@ -374,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541413380201</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Correction 0xFF">
+      <created>1541413828398</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541413828398</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133081000" />
+    <option name="totallyTimeSpent" value="136668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,7 +434,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4926004" visible="true" weight="0.18724832" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4926004" visible="true" weight="0.19261745" />
       <window_info id="Structure" order="1" sideWeight="0.50739956" side_tool="true" weight="0.2590604" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -472,9 +513,20 @@
     </ignored-roots>
     <MESSAGE value="UPdate on Kmeans" />
     <MESSAGE value="Final Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Version" />
+    <MESSAGE value="Correction 0xFF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction 0xFF" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="tensor[0]" />
@@ -555,13 +607,6 @@
     <entry file="file://$PROJECT_DIR$/mini-projet1-cs107.eml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs107KNN/SignatureChecks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/Train/reduced10Kto1K_labels" />
     <entry file="file://$PROJECT_DIR$/../../fichierproj1/mini-projet1-cs107/src/cs107KNN/KMeansClustering.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -607,13 +652,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs107KNN/SignatureChecks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cs107KNN/KMeansClustering.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="128" column="13" lean-forward="true" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+          <folding>
+            <element signature="method#main#0;class#KMeansClustering#0" />
+            <element signature="method#encodeIDXimages#0;class#KMeansClustering#0" />
+            <element signature="method#encodeIDXlabels#0;class#KMeansClustering#0" />
+            <element signature="docComment;method#encodeInt#0;class#KMeansClustering#0" />
+            <element signature="method#encodeInt#0;class#KMeansClustering#0" />
+            <element signature="method#KMeansReduce#0;class#KMeansClustering#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs107KNN/KNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="88" column="102" selection-start-line="88" selection-start-column="98" selection-end-line="88" selection-end-column="102" />
+        <state relative-caret-position="3774">
+          <caret line="336" column="7" lean-forward="true" selection-start-line="330" selection-start-column="4" selection-end-line="336" selection-end-column="7" />
+          <folding>
+            <element signature="method#quicksortIndices#0;class#KNN#0" />
+            <element signature="method#quicksortIndices#1;class#KNN#0" />
+            <element signature="method#swap#0;class#KNN#0" />
+            <element signature="method#indexOfMax#0;class#KNN#0" />
+            <element signature="method#electLabel#0;class#KNN#0" />
+            <element signature="method#swap#1;class#KNN#0" />
+            <element signature="method#quicksortIndices#2;class#KNN#0" />
+            <element signature="method#quicksortIndices#3;class#KNN#0" />
+            <element signature="method#knnClassify#0;class#KNN#0" />
+            <element signature="method#accuracy#0;class#KNN#0" />
+          </folding>
         </state>
       </provider>
     </entry>

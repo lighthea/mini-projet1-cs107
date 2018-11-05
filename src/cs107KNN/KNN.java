@@ -38,7 +38,7 @@ public class KNN {
 
     public static int extractInt(byte b31ToB24, byte b23ToB16, byte b15ToB8, byte b7ToB0) {
 
-	    /* Combine the bytes with OR so that we create a virtual 32 bit long byte (with OR the value of
+	    /* Combine the four bytes with the OR operator in order to create a virtual 32 bit long byte (using OR the value of
 		   the bits is conserved).
 
 		   Apply a 0xFF mask to ensure there will be no problem with the sign
@@ -50,7 +50,7 @@ public class KNN {
 
         return b7ToB0 & 0xFF | (b15ToB8 & 0xFF) << 8 | (b23ToB16 & 0xFF) << 16 | (b31ToB24 & 0xFF) << 24;
     }
-    //squaredEuclideanDistance is not as optimized as invertedSimilarity since our program does not make use of it.
+
     public static float squaredEuclideanDistance( byte[][] a, byte[][] b) {
         float sum = 0;
 
@@ -70,7 +70,7 @@ public class KNN {
         return sum;
         }
     /**
-     * Parses an IDX file containing images
+     * Parses an IDX file containing images into a computer-readable array
      *
      * @param data the binary content of the file
      *
@@ -100,7 +100,7 @@ public class KNN {
     }
 
     /**
-     * Parses an idx images containing labels
+     * Parses an IDX image containing labels into a computer-readable array
      *
      * @param data the binary content of the file
      *
@@ -112,9 +112,16 @@ public class KNN {
 
         //reading metadata
         int nLabels   = extractInt(data[4], data[5], data[6], data[7]);
+        //outputs the rest of the data
         return Arrays.copyOfRange(data, 8, nLabels + 8);
     }
-
+    /**
+     * @brief Computes the average pixel value of an image
+     *
+     * @param a an image
+     *
+     * @return the average pixel value of the image
+     */
     public static float average (byte[][] a) {
 
         float average = 0;
@@ -127,9 +134,9 @@ public class KNN {
         return average / (lenI * lenJ);
         }
     /**
-     * @brief Computes the inverted similarity between 2 images.
+     * @brief Computes the inverted similarity between two images.
      *
-     * @param a, b two images of same dimensions
+     * @param a, b two images of the same size
      *
      * @return the inverted similarity between the two images
      */
@@ -156,9 +163,9 @@ public class KNN {
                 moyenneAminus = a[i][j] - moyenneA;
                 moyenneBminus = b[i][j] - moyenneB;
 
-                numerator   += (moyenneAminus * moyenneBminus);
-                temp2       += Math.pow(moyenneBminus,2);
-                temp1       += Math.pow(moyenneAminus,2);
+                numerator   += (moyenneAminus * moyenneBminus); // Aij - Average(A) * Bij - Average(B)
+                temp2       += Math.pow(moyenneBminus,2);// (Bij - Average(B))^2
+                temp1       += Math.pow(moyenneAminus,2);// (Aij - Average(A))^2
             }
         }
         denominator = (float) Math.sqrt(temp1 * temp2);
@@ -167,7 +174,13 @@ public class KNN {
         if(denominator == 0 ) {return 2;}
         else {return (float) 1 - (numerator/denominator) ;}
 }
-
+    /**
+     * @brief Sorts the array using the Quicksort algorithm
+     *
+     * @param values, the array to sort
+     *
+     * @return the indices of the input array sorted so that they correspond to the sorted version of the input array
+     */
     public static int[] quicksortIndices(float[] values) {
         int[] indices = new int[values.length];
 
@@ -205,7 +218,13 @@ public class KNN {
             quicksortIndices(values, indices, l, high);
         }
     }
-
+    /**
+     * @brief Sorts the array using the Quicksort algorithm
+     *
+     * @param values, the array to sort
+     *
+     * @return the indices of the input array sorted so that they correspond to the sorted version of the input array
+     */
     public static void swap(int i, int j, float[] values, int[] indices) {
         float tmpFloat;
         int tmpInt;
@@ -218,7 +237,13 @@ public class KNN {
         indices[j]  = tmpInt;
 
     }
-
+    /**
+     * @brief Finds the index if the highest value in the array
+     *
+     * @param array, the array in which the element has to be found
+     *
+     * @return the highest value indices of the array
+     */
     public static int indexOfMax(int[] array) {
         float[] floats = new float[array.length];
 
@@ -230,7 +255,13 @@ public class KNN {
 
         return indices[array.length - 1];
     }
-
+    /**
+     * @brief Chooses the label of an image, considering its closest neighbours
+     *
+     * @param sortedIndices, labels, k : the array of sorted indices to use, the labels to use, the number of K-nearest neighbours to consider
+     *
+     * @return the label chosen for the image group
+     */
     public static byte electLabel(int[] sortedIndices, byte[] labels, int k) {
         assert k <= sortedIndices.length;
         int results[] = new int[10];
@@ -297,19 +328,31 @@ public class KNN {
 
         return indices;
     }
-
+    /**
+     * @brief Main function to use to classify the images
+     *
+     * @param image, trainImages, trainLabels, k, the image to elect, the images to train on, the labels of rhe images to train
+     *
+     * @return the label of an image
+     */
     public static byte knnClassify(byte[][] image, byte[][][] trainImages, byte[] trainLabels, int k) {
         assert image != null;
 
         double [] similarity = new double[trainLabels.length];
 
-        Arrays.parallelSetAll(similarity, i -> squaredEuclideanDistance(image, trainImages[i]));
+        Arrays.parallelSetAll(similarity, i -> invertedSimilarity(image, trainImages[i]));
         assert similarity.length != 0;
         int[] sortedIndices = quicksortIndices(similarity);
 
         return electLabel(sortedIndices, trainLabels, k);
     }
-
+    /**
+     * @brief mesure the accuracy of the predictions
+     *
+     * @param predictedLabels, trueLabels, the label predicted and the true label
+     *
+     * @return a percentage of accuracy
+     */
     public static double accuracy(byte[] predictedLabels, byte[] trueLabels) {
         int counter = 0;
         for(int i = 0; i < trueLabels.length; ++i) {
